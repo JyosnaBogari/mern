@@ -1,0 +1,65 @@
+GET http://127.0.0.1:3000/user-api/users
+
+###
+
+POST http://localhost:3000/user-api/users
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"jyosna",
+    "age":20
+}
+###
+
+PUT http://127.0.0.1:3000/user-api/users/id
+Content-Type: application/json
+
+{
+    "id":2,
+    "name":"sadiya",
+    "age":20
+}
+
+###
+
+GET http://127.0.0.1:3000/user-api/users/1
+
+ 
+###
+DELETE http://127.0.0.1:3000/user-api/users/1
+
+###
+GET http://localhost:3000/product-api/products
+
+###
+GET http://localhost:3000/product-api/products-id/10
+
+###
+GET http://localhost:3000/product-api/products-brand/HP
+
+###
+
+POST http://localhost:3000/product-api/products
+Content-Type: application/json
+
+{
+    "productId":10,
+    "name":"Laptop",
+    "price":60000,
+    "brand":"HP"
+}
+
+###
+PUT http://127.0.0.1:3000/product-api/products/id
+Content-Type: application/json
+
+{
+    "productId":20,
+    "name":"Mobile",
+    "price":20000,
+    "brand":"Redmi"
+}
+
+###
+DELETE http://localhost:3000/product-api/products/10

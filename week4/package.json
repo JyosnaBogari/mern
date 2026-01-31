@@ -1,0 +1,16 @@
+{
+  "name": "backend-demo",
+  "version": "1.0.0",
+  "description": "Generate package.json\r npm --node package manager \r npm init -y  \r  -- it is node library librarian\r  -- -y means accepting default values by yes(-y) giving",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "type":"module"
+}
