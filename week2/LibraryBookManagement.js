@@ -37,7 +37,7 @@ Requirements:
 */
 
 //class defined with name Book
-class Book
+class Book //class declaration
 {
     title;
     author;
@@ -45,18 +45,18 @@ class Book
     isAvailable=true;
     constructor(title,author,pages) //used to initialize objects
     {
-        this.title=title;
+        this.title=title; // this refers to the current class object
         this.author=author;
         this.pages=pages;
       
     }
     borrow()
     {
-        this.isAvailable=false;
+        this.isAvailable=false; 
     }
     returnBook()
     {
-        this.isAvailable=true;
+        this.isAvailable=true; // it return the available books
     }
     getInfo()
     {
@@ -65,14 +65,14 @@ class Book
    isLongBook()
    {
    if(this.pages>300){
-   return true;
+   return true; //returns the pages of books which are more than 300
    }
    else{
     return false;
    }
    }
 }
-let p1=new Book("C","balaguruswamy",300);  
+let p1=new Book("C","balaguruswamy",300);   //constructor calling with 5 objects
 let p2=new Book("C++","sadiya",400);
 let p3=new Book("Java","balaguruswamy",200);
 let p4=new Book("python","sadiya sadaf",400);
@@ -88,7 +88,7 @@ console.log(p5.getInfo())
  //Borrow 2 books and show their availability status
 p1.borrow("C");
 console.log(p1.isAvailable);
-
+//checking the availability of the book "java"
 p2.borrow("Java");
 console.log(p2.isAvailable);
 
