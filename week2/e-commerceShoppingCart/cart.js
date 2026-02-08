@@ -13,22 +13,22 @@ export function addToCart(productId, quantity) {
     //    - If no, add new item
     // 4. Return success/error message
 
+    //get product details by id 
     const product = getProductById(productId);
-    if (!product) return "Product not found";
+    if (!product) return "Product not found";  
 
     if (!checkStock(productId, quantity)) {
-        return "Not enough stock";
+        return "Not enough stock"; // stock details
     }
-
+     // finding the items by productId 
     const item = cartItems.find((ele) => ele.productId === productId);
-
     if (item) {
-        item.quantity += quantity;
+        item.quantity += quantity; // increasing the quantity or updating the quantity if item is present
     } else {
         cartItems.push({ productId, quantity });
     }
 
-    return "Product added to cart";
+    return "Product added to cart"; 
 }
 
 export function removeFromCart(productId) {
@@ -78,5 +78,5 @@ export function clearCart() {
     // Empty the cart
     cartItems = [];
     return "Cart cleared";
-}
+}    
 
