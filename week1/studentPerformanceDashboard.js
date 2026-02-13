@@ -33,6 +33,13 @@ const students = [
   { id: 5, name: "Arjun", marks: 40 }
 ];
 
+//filter() students who passed (marks ≥ 40)
+map() to add a grade field
+        ≥90 → A
+        ≥75 → B
+        ≥60 → C
+        else → D
+
 let res1=students.filter(ele=>ele.marks>=40)
 console.log(res1);
 
@@ -57,13 +64,15 @@ let res2=students.map(ele=>{
 });
 
 console.log(res2);
-
-let res3=students.reduce((acc,ele)=>acc+ele.marks,0)/students.length;
+//reduce() to calculate average marks
+let averageMarks=students.reduce((acc,ele)=>acc+ele.marks,0)/students.length;
 //let avg=res3/students.length;
-console.log(res3);
+console.log(averageMarks);
 
+// find() the student who scored 92
 let res4=students.find(ele=>ele.marks==92)
 console.log(res4);
 
+//findIndex() of student "Kiran"
 let res5=students.findIndex(ele=>ele.name==="Kiran");//=== strictlu equality checks values+datatypes
 console.log(res5);
