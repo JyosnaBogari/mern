@@ -12,26 +12,26 @@ const transactions = [
 ];
 
 // Get only credit transactions
-let res1 = transactions.filter(ele => ele.type === "credit");
-console.log(res1);
+let credit = transactions.filter(ele => ele.type === "credit");
+console.log(credit);
 
 // Extract amounts from credit transactions
 let res2 = res1.map(ele => ele.amount);
 console.log(res2);
 
 // Calculate final balance (add credit, subtract debit)
-let res3 = transactions.reduce((acc, ele) => {
+let finaltransaction = transactions.reduce((acc, ele) => {
     if (ele.type === "credit") {
         return acc + ele.amount;
     } else {
         return acc - ele.amount;
     }
 }, 0);
-console.log(res3);
+console.log(finaltransaction );
 
 // Find the first debit transaction
-let res4 = transactions.find(ele => ele.type === "debit");
-console.log(res4);
+let debit = transactions.find(ele => ele.type === "debit");
+console.log(debit);
 
 // Find the index of transaction having amount 10000
 let res5 = transactions.findIndex(ele => ele.amount === 10000);
