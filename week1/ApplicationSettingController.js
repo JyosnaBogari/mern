@@ -25,8 +25,8 @@ const settings = {
 };
 
 //This only calculates the toggled value, it does NOT update settings.theme
-let res1=(settings.theme==="light")?"dark":"light";
-console.log(res1);
+let toggletheme=(settings.theme==="light")?"dark":"light";
+console.log(toggletheme);
 
 settings.autoSave=true;
 console.log(settings.autoSave);
