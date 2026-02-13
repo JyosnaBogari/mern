@@ -22,21 +22,25 @@ const cart = [
   { id: 103, name: "Keyboard", price: 1500, quantity: 1, inStock: false },
   { id: 104, name: "Monitor", price: 12000, quantity: 1, inStock: true }
 ];
-
+// Use filter() to get only inStock products
 let res1=cart.filter(ele=>ele.inStock==true) 
 console.log(res1);
 
+//Use map() to create a new array with:  { name, totalPrice }
 let arr=[];
 cart.map(ele=>{
 arr.push({name:ele.name,price:ele.price})
 })
 console.log(arr);
 
+//Use reduce() to calculate grand total cart value
 let res2=cart.reduce((acc,ele)=>acc+ele.price,0)
 console.log(res2)
 
+//Use find() to get details of "Mouse"
 let res3=cart.find(ele=>ele.name=="Mouse")
 console.log(res3)
 
+//Use findIndex() to find the position of "Keyboard"
 let res4=cart.findIndex(ele=>ele.name=="Keyboard")
 console.log(res4)
