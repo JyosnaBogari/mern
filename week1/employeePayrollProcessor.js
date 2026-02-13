@@ -29,8 +29,8 @@ const employees = [
 ];
 
 // Get only employees from IT department
-let res1=employees.filter(ele=>ele.department==="IT");
-console.log(res1);
+let getEmp=employees.filter(ele=>ele.department==="IT");
+console.log(getEmp);
 
 
 //here if i use () instead of {} then no need to write the return 
@@ -57,8 +57,8 @@ let res2=employees.map(ele=>{
 });
 console.log(res2);
 // Calculate total salary payout of all employees
-let res3=employees.reduce((acc,ele)=>acc+ele.salary,0);
-console.log(res3);
+let totalSalary=employees.reduce((acc,ele)=>acc+ele.salary,0);
+console.log(totalSalary);
 
 // Find employee whose salary is 30000
 let res4=employees.find(ele=>ele.salary===30000);
